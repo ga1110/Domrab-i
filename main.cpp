@@ -1,18 +1,19 @@
 ﻿#include <iostream> 
 using namespace std;
-
-int f(int n)
-{
-    if (n == 1 || n == 2) return (n - 1);
-    return f(n - 1) + f(n - 2);
-}
-
 int main()
 {
     int n;
+    int a, b, c;
+    c = 0;
+    a = 0;
+    b = 1;
     cout << "n="; cin >> n;
-    cout << f(n) << " ";
-    cout << endl;
-    system("pause");
+    for (int i = 0; i != n; i++) {
+        cout << c << endl;
+        c = a + b;
+        b = a;
+        a = c;
+
+    }
     return 0;
 }
